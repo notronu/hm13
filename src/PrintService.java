@@ -1,6 +1,6 @@
 public class PrintService {
 
-    public void print (Gryffindor[] gryffindors) {
+    public void print(Gryffindor[] gryffindors) {
         System.out.println("Число учеников Гриффидора: " + gryffindors.length);
         for (int i = 0; i < gryffindors.length; i++) {
             Gryffindor gryffindor = gryffindors[i];
@@ -12,7 +12,8 @@ public class PrintService {
                     + "; храбрость " + gryffindor.getBravery());
         }
     }
-    public void print (Hufflepuff[] hufflepuffs) {
+
+    public void print(Hufflepuff[] hufflepuffs) {
         System.out.println("Число учеников Пуффендуя: " + hufflepuffs.length);
         for (int i = 0; i < hufflepuffs.length; i++) {
             Hufflepuff hufflepuff = hufflepuffs[i];
@@ -24,7 +25,8 @@ public class PrintService {
                     + "; честность " + hufflepuff.getHonesty());
         }
     }
-    public void print (Ravenclaw[] ravenclaws) {
+
+    public void print(Ravenclaw[] ravenclaws) {
         System.out.println("Число учеников Когтеврана: " + ravenclaws.length);
         for (int i = 0; i < ravenclaws.length; i++) {
             Ravenclaw ravenclaw = ravenclaws[i];
@@ -36,7 +38,8 @@ public class PrintService {
                     + "; Творчество " + ravenclaw.getCreativity());
         }
     }
-    public void print (Slytherin[] slytherins) {
+
+    public void print(Slytherin[] slytherins) {
         System.out.println("Число учеников Слизерина: " + slytherins.length);
         for (int i = 0; i < slytherins.length; i++) {
             Slytherin slytherin = slytherins[i];
@@ -52,5 +55,5 @@ public class PrintService {
         }
     }
 
-    }
+}
 

@@ -53,7 +53,7 @@ public class Slytherin extends Hogwarts{
     public void setAuthoritativeness(int authoritativeness) {
         this.authoritativeness = authoritativeness;
     }
-    public void compareAllStudents(Slytherin[] slytherins){
+    public static void points(Slytherin[] slytherins){
         int sum = 0;
         int sum1 = 0;
         int number = 0;
@@ -66,7 +66,7 @@ public class Slytherin extends Hogwarts{
                 number = i;
             }
         }
-        System.out.println(slytherins[number].getName() + " is the best Slytherin");
+        System.out.println(slytherins[number].getName() + " лучший слизеренец");
 
     }
 }
