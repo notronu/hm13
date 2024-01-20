@@ -32,12 +32,12 @@ public class Hogwarts {
     }
 
     public static void points(Hogwarts[] hogwarts1) {
-        int sum = hogwarts1[2].getPower() + hogwarts1[2].getDistanceOfTransgression();
-        int sum1 = hogwarts1[3].getPower() + hogwarts1[3].getDistanceOfTransgression();
+        int sum = hogwarts1[3].getPower() + hogwarts1[3].getDistanceOfTransgression();
+        int sum1 = hogwarts1[2].getPower() + hogwarts1[2].getDistanceOfTransgression();
         if (sum < sum1) {
-            System.out.println(hogwarts1[3].getName() + " обладает большой мощностью магии, чем " + hogwarts1[2]);
-        } else {
             System.out.println(hogwarts1[2].getName() + " обладает большой мощностью магии, чем " + hogwarts1[3]);
+        } else {
+            System.out.println(hogwarts1[3].getName() + " обладает большой мощностью магии, чем " + hogwarts1[2]);
         }
     }
 
