@@ -1,4 +1,5 @@
 public class Hogwarts {
+
     private final String name;
     private int power;
     private int distanceOfTransgression;
@@ -31,22 +32,25 @@ public class Hogwarts {
     }
 
     public static void points(Hogwarts[] hogwarts1) {
-        int sum = 0;
-        int sum1 = 0;
-        int number = 0;
-        for (int i = 0; i < hogwarts1.length; i++) {
-            Hogwarts hogwarts = hogwarts1[i];
-            sum1 = hogwarts.getDistanceOfTransgression() + hogwarts.getPower();
-            if (sum < sum1) {
-                sum = sum1;
-                number = i;
-            }
+        int sum = hogwarts1[3].getPower() + hogwarts1[3].getDistanceOfTransgression();
+        int sum1 = hogwarts1[2].getPower() + hogwarts1[2].getDistanceOfTransgression();
+        if (sum < sum1) {
+            System.out.println(hogwarts1[2].getName() + " обладает большой мощностью магии, чем " + hogwarts1[3]);
+        } else {
+            System.out.println(hogwarts1[3].getName() + " обладает большой мощностью магии, чем " + hogwarts1[2]);
         }
-        System.out.println(hogwarts1[number].getName() + " самый сильный");
     }
 
+    @Override
+    public String toString() {
+        return name;
 
 
+    }
 }
+
+
+
+
 
 

@@ -35,17 +35,13 @@ public class Hufflepuff extends Hogwarts{
     }
 
     public static void points(Hufflepuff[] hufflepuffs) {
-        int sum = 0;
-        int sum1 = 0;
-        int number = 0;
-        for (int i = 0; i < hufflepuffs.length; i++) {
-            Hufflepuff hufflepuff = hufflepuffs[i];
-            sum1 = hufflepuff.getHonesty() + hufflepuff.getIndustriousness() + hufflepuff.getLoyalty();
-            if (sum < sum1) {
-                sum = sum1;
-                number = i;
-            }
+        int sum = hufflepuffs[0].getHonesty() + hufflepuffs[0].getIndustriousness() + hufflepuffs[0].getLoyalty();
+        int sum1 = hufflepuffs[1].getHonesty()+ hufflepuffs[1].getIndustriousness() + hufflepuffs[1].getLoyalty();
+        if(sum < sum1) {
+            System.out.println(hufflepuffs[1].getName() + " лучший пуффендуец");
+        } else {
+            System.out.println(hufflepuffs[0].getName() + " лучший пуффендуец");
+
         }
-        System.out.println(hufflepuffs[number].getName() + " лучший пуффендуец");
     }
 }
