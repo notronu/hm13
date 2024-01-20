@@ -54,19 +54,14 @@ public class Slytherin extends Hogwarts{
         this.authoritativeness = authoritativeness;
     }
     public static void points(Slytherin[] slytherins){
-        int sum = 0;
-        int sum1 = 0;
-        int number = 0;
-        for(int i = 0; i < slytherins.length; i++){
-            Slytherin slytherin = slytherins[i];
-            sum1 = slytherin.getTricky() + slytherin.getDetermination() + slytherin.getAmbition()
-                    + slytherin.getResourcefulness() + slytherin.getAuthoritativeness();
-            if(sum < sum1){
-                sum = sum1;
-                number = i;
-            }
+        int sum = slytherins[0].getAmbition() + slytherins[0].getAuthoritativeness() + slytherins[0].getResourcefulness() + slytherins[0].getDetermination() + slytherins[0].getTricky();
+        int sum1 = slytherins[1].getAmbition()+ slytherins[1].getAuthoritativeness() + slytherins[1].getResourcefulness() + + slytherins[1].getDetermination() + slytherins[1].getTricky();
+        if(sum < sum1) {
+            System.out.println(slytherins[1].getName() + " лучший слизеринец");
+        } else {
+            System.out.println(slytherins[0].getName() + " лучший слизеринец");
+
         }
-        System.out.println(slytherins[number].getName() + " лучший слизеренец");
 
     }
 }

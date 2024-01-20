@@ -35,20 +35,18 @@ public class Gryffindor extends Hogwarts {
     }
 
     public static void points(Gryffindor[] gryffindors) {
-        int sum = 0;
-        int sum1 = 0;
-        int number = 0;
-        for (int i = 0; i < gryffindors.length; i++) {
-            Gryffindor gryffindor = gryffindors[i];
-            sum1 = gryffindor.getDistanceOfTransgression() + gryffindor.getPower();
-            if (sum < sum1) {
-                sum = sum1;
-                number = i;
+        int sum = gryffindors[0].getNobility() + gryffindors[0].getBravery() + gryffindors[0].getHonor();
+        int sum1 = gryffindors[1].getNobility()+ gryffindors[1].getBravery() + gryffindors[1].getHonor();
+        if(sum < sum1) {
+            System.out.println(gryffindors[1].getName() + " лучший грифиндорец");
+        } else {
+            System.out.println(gryffindors[0].getName() + " лучший грифиндорец");
+
             }
         }
-        System.out.println(gryffindors[number].getName() + " лучший гриффиндорец");
+
     }
 
 
 
-}
+

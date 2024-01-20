@@ -40,18 +40,14 @@ public class Ravenclaw extends Hogwarts {
     }
 
     public static void points(Ravenclaw[] ravenclaws) {
-        int sum = 0;
-        int sum1 = 0;
-        int number = 0;
-        for (int i = 0; i < ravenclaws.length; i++) {
-            Ravenclaw ravenclaw = ravenclaws[i];
-            sum1 = ravenclaw.getWisdom() + ravenclaw.getIntellect() + ravenclaw.getCreativity();
-            if (sum < sum1) {
-                sum = sum1;
-                number = i;
-            }
+        int sum = ravenclaws[0].getWisdom() + ravenclaws[0].getCreativity() + ravenclaws[0].getIntellect();
+        int sum1 = ravenclaws[1].getCreativity()+ ravenclaws[1].getWisdom() + ravenclaws[1].getIntellect();
+        if(sum < sum1) {
+            System.out.println(ravenclaws[1].getName() + " лучший пуффендуец");
+        } else {
+            System.out.println(ravenclaws[0].getName() + " лучший пуффендуец");
+
         }
-        System.out.println(ravenclaws[number].getName() + " лучший когтевранец");
     }
 
 
