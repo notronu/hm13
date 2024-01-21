@@ -34,14 +34,29 @@ public class Hufflepuff extends Hogwarts{
         this.honesty = honesty;
     }
 
-    public static void points(Hufflepuff[] hufflepuffs) {
-        int sum = hufflepuffs[0].getHonesty() + hufflepuffs[0].getIndustriousness() + hufflepuffs[0].getLoyalty();
-        int sum1 = hufflepuffs[1].getHonesty()+ hufflepuffs[1].getIndustriousness() + hufflepuffs[1].getLoyalty();
-        if(sum < sum1) {
-            System.out.println(hufflepuffs[1].getName() + " лучший пуффендуец");
+    @Override
+    public String toString() {
+        return getName() + " power= " + getPower() +
+                ", distanceOfTransgression " + getDistanceOfTransgression() +
+                ", industriousness=" + industriousness +
+                ", loyalty=" + loyalty +
+                ", honesty=" + honesty +
+                '}';
+    }
+
+    public void compare(Hufflepuff second) {
+        int sum1 = this.getHonesty() + this.getLoyalty() + this.getIndustriousness();
+        int sum2 = second.getHonesty() + second.getLoyalty() + second.getIndustriousness();
+
+        if (sum1 > sum2) {
+            System.out.println(this.getName() + " лучший Пуффендуец, чем " + second.getName() + ".");
+        } else if (sum1 < sum2) {
+            System.out.println(second.getName() + " лучший Пуффендуец, чем " + this.getName() + ".");
         } else {
-            System.out.println(hufflepuffs[0].getName() + " лучший пуффендуец");
+            System.out.println(this.getName() + " и " + second.getName() + " имеют равное количество очков навыков");
+        }
 
         }
+
     }
-}
+

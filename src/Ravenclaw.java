@@ -39,15 +39,28 @@ public class Ravenclaw extends Hogwarts {
         this.creativity = creativity;
     }
 
-    public static void points(Ravenclaw[] ravenclaws) {
-        int sum = ravenclaws[0].getWisdom() + ravenclaws[0].getCreativity() + ravenclaws[0].getIntellect();
-        int sum1 = ravenclaws[1].getCreativity()+ ravenclaws[1].getWisdom() + ravenclaws[1].getIntellect();
-        if(sum < sum1) {
-            System.out.println(ravenclaws[1].getName() + " лучший пуффендуец");
-        } else {
-            System.out.println(ravenclaws[0].getName() + " лучший пуффендуец");
+    @Override
+    public String toString() {
+        return getName() + "power= " + getPower() +
+                ", distanceOfTransgression " + getDistanceOfTransgression() +
+                ", intellect=" + intellect +
+                ", wisdom=" + wisdom +
+                ", creativity=" + creativity +
+                '}';
+    }
 
+    public void compare(Ravenclaw second) {
+        int sum1 = this.getCreativity() + this.getWisdom() + this.getIntellect();
+        int sum2 = second.getCreativity() + second.getWisdom() + second.getIntellect();
+
+        if (sum1 > sum2) {
+            System.out.println(this.getName() + " лучший Когтевранец, чем " + second.getName() + ".");
+        } else if (sum1 < sum2) {
+            System.out.println(second.getName() + " лучший Когтевранец, чем " + this.getName() + ".");
+        } else {
+            System.out.println(this.getName() + " и " + second.getName() + " имеют равное количество очков навыков");
         }
+
     }
 
 

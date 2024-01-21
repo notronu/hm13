@@ -53,15 +53,31 @@ public class Slytherin extends Hogwarts{
     public void setAuthoritativeness(int authoritativeness) {
         this.authoritativeness = authoritativeness;
     }
-    public static void points(Slytherin[] slytherins){
-        int sum = slytherins[0].getAmbition() + slytherins[0].getAuthoritativeness() + slytherins[0].getResourcefulness() + slytherins[0].getDetermination() + slytherins[0].getTricky();
-        int sum1 = slytherins[1].getAmbition()+ slytherins[1].getAuthoritativeness() + slytherins[1].getResourcefulness() + + slytherins[1].getDetermination() + slytherins[1].getTricky();
-        if(sum < sum1) {
-            System.out.println(slytherins[1].getName() + " лучший слизеринец");
-        } else {
-            System.out.println(slytherins[0].getName() + " лучший слизеринец");
 
+    @Override
+    public String toString() {
+        return getName() + " power= " + getPower() +
+                ", distanceOfTransgression " + getDistanceOfTransgression() +
+                ", tricky=" + tricky +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", authoritativeness=" + authoritativeness +
+                '}';
+    }
+
+    public void compare(Slytherin second) {
+        int sum1 = this.getAmbition() + this.getDetermination() + this.getTricky() + this.getResourcefulness() + this.getAuthoritativeness();
+        int sum2 = second.getAmbition() + second.getDetermination() + second.getTricky() + second.getResourcefulness() + second.getAuthoritativeness();
+
+        if (sum1 > sum2) {
+            System.out.println(this.getName() + " лучший Слизеринец, чем " + second.getName() + ".");
+        } else if (sum1 < sum2) {
+            System.out.println(second.getName() + " лучший Слизеринец, чем " + this.getName() + ".");
+        } else {
+            System.out.println(this.getName() + " и " + second.getName() + " имеют равное количество очков навыков");
         }
+
 
     }
 }
