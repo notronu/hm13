@@ -31,23 +31,35 @@ public class Hogwarts {
         return name;
     }
 
-    public static void points(Hogwarts[] hogwarts1) {
-        int sum = hogwarts1[3].getPower() + hogwarts1[3].getDistanceOfTransgression();
-        int sum1 = hogwarts1[2].getPower() + hogwarts1[2].getDistanceOfTransgression();
-        if (sum < sum1) {
-            System.out.println(hogwarts1[2].getName() + " обладает большой мощностью магии, чем " + hogwarts1[3]);
-        } else {
-            System.out.println(hogwarts1[3].getName() + " обладает большой мощностью магии, чем " + hogwarts1[2]);
-        }
-    }
 
     @Override
     public String toString() {
-        return name;
+        return "Hogwarts{" +
+                "name='" + name + '\'' +
+                ", power=" + power +
+                ", distanceOfTransgression=" + distanceOfTransgression +
+                '}';
+    }
+    public void compareAnyStudents(Hogwarts second) {
+        if (this.getPower() > second.getPower()) {
+            System.out.println(this.getName() + " обладает большей силой магии,чем " + second.getName());
+        } else if (this.getPower() < second.getPower()) {
+            System.out.println(second.getName() + " обладает большей силой магии,чем " + this.getName());
+        } else {
+            System.out.println(second.getName() + " и " + this.getName() + " равны по силе");
+        }
 
-
+        if (this.getDistanceOfTransgression() > second.getDistanceOfTransgression()) {
+            System.out.println(this.getName() + " обладает большим расстоянием прогрессии,чем " + second.getName());
+        } else if (this.getDistanceOfTransgression() < second.getDistanceOfTransgression()) {
+            System.out.println(second.getName() + " обладает большим расстоянием трансгрессии,чем " + this.getName());
+        } else {
+            System.out.println(second.getName() + " и " + this.getName() + " равны по расстоянию трансгрессии");
+        }
     }
 }
+
+
 
 
 
